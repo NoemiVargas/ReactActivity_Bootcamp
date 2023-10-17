@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
 import { Card } from 'react-bootstrap';
+import { format, parseISO } from 'date-fns';
 
 const index = (): JSX.Element => {
 	const [investmentTypes, investmentTypesSet] = useState<InvestmentTypeResponse[]>([]);
@@ -46,7 +47,7 @@ const index = (): JSX.Element => {
 												<td>{investmentType.id}</td>
 												<td>{investmentType.name}</td>
 												<td>{investmentType.description}</td>
-												<td>{investmentType.slug}</td>
+												<td>{format(parseISO(investmentType.registrationdate), 'dd/MM/yyyy')}</td>
 												<td>
 													<Badge pill bg={investmentType.state ? 'success' : 'danger'}>
 														{investmentType.state ? 'Activo' : 'Elminado'}

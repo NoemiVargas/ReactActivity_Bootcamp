@@ -3,6 +3,6 @@ export default interface InvestmentTypeResponse {
 	name: string;
 	description?: string;
 	slug: string;
-	registrationDate: Date;
+	registrationdate: Date;
 	state: boolean;
 }

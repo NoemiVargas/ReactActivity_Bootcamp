@@ -3,4 +3,4 @@ import { type InvestmentTypeResponse } from '../domain';
 
 
 export const findAll = async (): Promise<AxiosResponse<InvestmentTypeResponse[]>> =>
-	await axios.get<InvestmentTypeResponse[]>('https://localhost:7014/api/investmenttype');
+	await axios.get<InvestmentTypeResponse[]>('https://localhost:7021/api/Invesmenttype');
